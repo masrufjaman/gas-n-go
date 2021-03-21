@@ -1,13 +1,13 @@
 # Project: Gas Fill and Service System using Django Framework
-Please scroll down and click on the download button to download **Gas-N-Go** using Django Framework project for free.
+Please scroll down and click on the download button to download **Gas-N-Go** by using Django Framework project for free.
 
-Gas-N-Go is a gas fill and service management project developed in Django. Service Provider can add services, add details, add gallery pictures. User can see providers services, make appoinment to take gas and services, and also they can make payment via online. They can also contact to the Gas Station and Service Center through Phone or Email.
+Gas-N-Go is a gas fill and service management project which is working in Django. Service Provider can add services, add details, add gallery pictures. User can see the provider services, make appoinment to take gas and services, and also they can make payment via online. They can also contact to the Gas Station and Service Center by Phone or Email.
 
 ## About System
-The system is built fully in Django Framework in back-end and HTML, CSS in front-end.
+The system has been built fully by Django Framework for back-end and HTML, CSS for front-end.
 
 ## How To Run The Project?
-To run this project, you must have installed [Python](https://www.python.org/downloads/) on your PC. After downloading the project, follow the steps below:
+To run this project, you must have to install [Python](https://www.python.org/downloads/) on your PC. After downloading the project, follow the steps which is given below:
 
 **Step-1:** Extract/unzip the file
 
