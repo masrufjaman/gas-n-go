@@ -6,8 +6,8 @@ def home(request):
 
 
 def about(request):
-    return render(request, 'home/about.html')
+    return render(request, 'home/about.html', {'title': 'About'})
 
 
 def help(request):
-    return render(request, 'home/help.html')
+    return render(request, 'home/help.html', {'title': 'Help'})
