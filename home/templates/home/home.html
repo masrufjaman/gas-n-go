@@ -1,5 +1,5 @@
 {% extends "home/base.html" %} {% block content %}
 <h1>This is our Home page!</h1>
-<a href="about">about</a>
-<a href="help">help</a>
+<a href="{% url 'home-about' %}">About</a>
+<a href="{% url 'home-help' %}">Help</a>
 {% endblock content %}
