@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ! Links -->
+    <!-- * css link -->
+    <link rel="stylesheet" href="{% static 'home/main.css' %}" />
+
+    <!-- * icons link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <!-- ! Links -->
+    {% if title %}
+    <title>Gas N Go || {{ title }}</title>
+    {% else %}
+    <title>Gas N Go</title>
+    {% endif %}
+  </head>
+  <body>
+  <div class="header" id="header">
+		<div class= "nav-bar">
+			<div class="logo">
+				<a href="#">gas & go</a>
+			</div>
+			<div class="menu">
+				<ul>
+					<li><a href="{% url 'home-about' %}">about</a></li>
+					<li><a href="#">login</a></li>
+					<li><a href="#">contact us</a></li>
+					<li><a href="#">Reviews</a></li>
+					<li><a href="{% url 'home-help' %}">Help</a></li>
+
+				</ul>
+			</div>
+	</div>
+    {% block content %}{% endblock %}
+
+    <!-- * Footer Start -->
+    <div class="footer">
+      <div class="container">
+        <div class="row flex">
+          <div class="footer-col-1">
+            <h3>Download our app</h3>
+            <p>Download App for android & ios mobile phone.</p>
+            <div class="app-logo">
+              <img src="{% static "home/images/play-store.png" %}" alt="">
+              <img src="{% static "home/images/app-store.png" %}" alt="">
+            </div>
+          </div>
+          <div class="footer-col-2">
+            <img src="" alt="">
+            <p>Our Purpose Is To Sustainable Make the pleasure.</p>
+          </div>
+          <div class="footer-col-3">
+            <h3>Useful Links</h3>
+            <ul>
+              <li>Membership</li>
+              <li>Blog Post</li>
+              <li>Return Policy</li>
+              <li>Join Affiliate</li>
+            </ul>
+          </div>
+          <div class="footer-col-4">
+            <h3>Follow Us</h3>
+            <ul>
+              <li>Facebook</li>
+              <li>Twitter</li>
+              <li>Instagram</li>
+              <li>YouTube</li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+
+        <p class="copyright">
+          <i class="fa fa-copyright"></i> Copyright 2021-2022 | <strong style="color: #eebf00;">Gas N Go</strong>
+        </p>
+        
+      </div>
+    </div>
+    <!-- * Footer End -->
+  </body>
+</html>
