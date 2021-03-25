@@ -7,14 +7,15 @@ Please scroll down and click on the download button to download **Gas N Go** by 
 
 [Gas N Go](https://github.com/masrufjaman/gas-n-go) is a gas fill and service management project which is working in Django. Service Provider can add services, add details, add gallery pictures. User can see the provider services, make appoinment to take gas and services, and also they can make payment via online. They can also contact to the Gas Station and Service Center by Phone or Email.
 
-## About System
+### About System
 The system has been built fully by Django Framework for back-end and HTML, CSS for front-end.
 
 ***
 
+### Download
 The Gas Fill and Service System using Django Framework is free to download, **Use for educational purposes only!**
 
-[Download Gas N Go](https://github.com/masrufjaman/gas-n-go/archive/refs/heads/main.zip)
+[Download **->** Gas N Go](https://github.com/masrufjaman/gas-n-go/archive/refs/heads/main.zip)
 
 
 ## For more information:
