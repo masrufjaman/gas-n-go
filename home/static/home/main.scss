@@ -1,11 +1,19 @@
 @import "./colorsVar";
 
-/* make flex, justify & align to use in html */
+// !flex, justify & align for use in html
 .flex {
   display: flex;
 }
 
-/* reset */
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+// !reset
 * {
   padding: 0;
   margin: 0;
@@ -19,7 +27,7 @@
   margin: 0 auto;
 }
 
-/* query for container size */
+// !query for container size
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
@@ -39,6 +47,31 @@
   .container {
     max-width: 1152px;
   }
+}
+
+/* ----- Header topbar ----- */
+header.topbar {
+  background-color: $secondary;
+  color: $pure;
+  padding: 0.3rem 0;
+}
+
+header.topbar .icons a {
+  color: $pure;
+  margin-right: 0.6rem;
+}
+
+header.topbar .auth > div a {
+  color: $pure;
+  text-decoration: none;
+}
+
+header.topbar .auth > div i {
+  margin-right: 0.35rem;
+}
+
+header.topbar .auth .divider {
+  padding: 0 1rem;
 }
 
 /* ----- FOOTER ----- */
