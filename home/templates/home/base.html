@@ -15,7 +15,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
+
+    <!-- * Fonts link -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- ! Links -->
+
     {% if title %}
     <title>Gas N Go || {{ title }}</title>
     {% else %}
@@ -56,22 +63,33 @@
     </header>
     <!-- *Header end -->
 
-    <!-- <div class="header" id="header">
-		<div class= "nav-bar">
-			<div class="logo">
-				<a href="#">gas & go</a>
-			</div>
-			<div class="menu">
-				<ul>
-					<li><a href="{% url 'home-about' %}">about</a></li>
-					<li><a href="#">login</a></li>
-					<li><a href="#">contact us</a></li>
-					<li><a href="#">Reviews</a></li>
-					<li><a href="{% url 'home-help' %}">Help</a></li>
-
-				</ul>
-			</div>
-	</div> -->
+    <!-- *Navbar Start -->
+    <!-- *Top-nav Start -->
+    <div class="top">
+      <div class="container flex justify-between">
+        <div class="contact flex items-center">
+          <i class="fas fa-phone-alt"></i>
+          <div>
+            <h5>Call Us: (+880) 17 93798 719</h5>
+            <h6>E-main: masruf.jaman@northsouth.edu</h6>
+          </div>
+        </div>
+        <!-- !Logo -->
+        <div class="branding">
+          <!-- TODO: Make Branding logo -->
+          <img src="" alt="" />
+        </div>
+        <div class="time flex items-center">
+          <i class="far fa-clock"></i>
+          <div>
+            <h5>Working Hours:</h5>
+            <h6>Mon - Sat (08.00AM - 10.00PM)</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- *Top-nav End -->
+    <!-- *Navbar End -->
 
     {% block content %}{% endblock %}
 
