@@ -1,3 +1,93 @@
-{% extends "home/base.html" %} {% block content %}
 
+
+ 
+{% extends "home/base.html" %} {% load static %}{% block content %}
+<link rel="stylesheet" href="{% static 'home/main.css' %}" />
+{% comment %} <!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.box {
+  float: left;
+  width: 33.33%;
+  padding: 95px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body>
+
+
+<p> </p>
+
+<div class="clearfix">
+  <div class="box" style="background-color:#bbb">
+  <p>                                          </p>
+  </div>
+  <div class="box" style="background-color:#ccc">
+  <p>                                            </p>
+  </div>
+  <div class="box" style="background-color:#ddd">
+  <p>                                             </p>
+  </div>
+</div>
+
+<head>
+    <style>
+    * {
+      box-sizing: border-box
+    }
+    
+    .box {
+      float: left;
+      width: 33.33%;
+      padding: 95px;
+    }
+    
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    </style>
+    </head>
+    <body>
+    
+    <p>    </p>
+    
+    <div class="clearfix">
+      <div class="box" style="background-color:#bbb">
+      <p>                                           </p>
+      </div>
+      <div class="box" style="background-color:#ccc">
+      <p>                                                </p>
+      </div>
+      <div class="box" style="background-color:#ddd">
+      <p>                                                   </p>
+      </div>
+    </div>
+    
+    </body>
+</body>
+</html> {% endcomment %}
+<div class="clearfix">
+  <div class="box" >
+  </div>
+  <div class="box" >
+  </div>
+  <div class="box" >
+    </div>
+  <div class="box" >
+  </div>
+  <div class="box" >
+  </div>
+  <div class="box" >
+  </div>
+</div>
 {% endblock content %}
