@@ -15,7 +15,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
+
+    <!-- * Fonts link -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- ! Links -->
+
     {% if title %}
     <title>Gas N Go || {{ title }}</title>
     {% else %}
@@ -23,23 +30,72 @@
     {% endif %}
   </head>
   <body>
-  <div class="header" id="header">
-		<div class= "nav-bar">
-			<div class="logo">
-				<a href="#">gas & go</a>
-			</div>
-			<div class="menu">
-				<ul>
-					<li><a href="{% url 'home-about' %}">about</a></li>
-					<li><a href="#">login</a></li>
-					<li><a href="#">contact us</a></li>
-					<li><a href="#">Reviews</a></li>
-					<li><a href="{% url 'home-help' %}">Help</a></li>
+    <!-- *Header start -->
+    <header class="topbar">
+      <div class="container flex justify-between items-center">
+        <div class="icons">
+          <a href=""><i class="fab fa-facebook"></i></a>
+          <a href=""><i class="fab fa-twitter"></i></a>
+          <a href=""><i class="fab fa-google"></i></a>
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-search"></i></a>
+        </div>
+        <div class="auth flex items-center">
+          <div>
+            <i class="fas fa-users"></i>
+            <!-- TODO: Add login page link -->
+            <a href="">Log in</a>
+          </div>
+          <span class="divider">|</span>
+          <div>
+            <i class="fas fa-user-plus"></i>
+            <!-- TODO: Add Ragistration page link -->
+            <a href="">Register Now</a>
+          </div>
+          <span class="divider">|</span>
+          <div>
+            <i class="fas fa-shopping-cart"></i>
+            <!-- TODO: Add Payment page link -->
+            <a href="">0 Items - ($0.00)</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- *Header end -->
 
-				</ul>
-			</div>
-	</div>
-    {% block content %}{% endblock %}
+    <!-- *Navbar Start -->
+    <nav>
+      <!-- *Top-nav Start -->
+      <div class="top">
+        <div class="container flex justify-between">
+          <div class="contact flex items-center">
+            <i class="fas fa-phone-alt"></i>
+            <div>
+              <h5>Call Us: (+880) 17 93798 719</h5>
+              <h6>E-mail: masruf.jaman@northsouth.edu</h6>
+            </div>
+          </div>
+          <!-- !Logo -->
+          <div class="branding">
+            <!-- TODO: Make Branding logo -->
+            <img src="" alt="" />
+          </div>
+          <div class="time flex items-center">
+            <i class="far fa-clock"></i>
+            <div>
+              <h5>Working Hours:</h5>
+              <h6>Mon - Sat (08.00AM - 10.00PM)</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- *Top-nav End -->
+    </nav>
+    <!-- *Navbar End -->
+
+    <div class="container">
+      {% block content %}{% endblock %}
+    </div>
 
     <!-- * Footer Start -->
     <div class="footer">
@@ -49,12 +105,12 @@
             <h3>Download our app</h3>
             <p>Download App for android & ios mobile phone.</p>
             <div class="app-logo">
-              <img src="{% static "home/images/play-store.png" %}" alt="">
-              <img src="{% static "home/images/app-store.png" %}" alt="">
+              <img src="{% static "home/images/play-store.png" %}" alt=""> <img
+              src="{% static "home/images/app-store.png" %}" alt="">
             </div>
           </div>
           <div class="footer-col-2">
-            <img src="" alt="">
+            <img src="" alt="" />
             <p>Our Purpose Is To Sustainable Make the pleasure.</p>
           </div>
           <div class="footer-col-3">
@@ -76,14 +132,14 @@
             </ul>
           </div>
         </div>
-        <hr>
+        <hr />
 
         <p class="copyright">
-          <i class="fa fa-copyright"></i> Copyright 2021-2022 | <strong style="color: #eebf00;">Gas N Go</strong>
+          <i class="fa fa-copyright"></i> Copyright 2021-2022 |
+          <strong style="color: #eebf00">Gas N Go</strong>
         </p>
-        
       </div>
-    </div>
+    </class=>
     <!-- * Footer End -->
   </body>
 </html>

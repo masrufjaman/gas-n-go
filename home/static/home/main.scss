@@ -1,11 +1,19 @@
 @import "./colorsVar";
 
-/* make flex, justify & align to use in html */
+// !flex, justify & align for use in html
 .flex {
   display: flex;
 }
 
-/* reset */
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+// !reset
 * {
   padding: 0;
   margin: 0;
@@ -19,7 +27,7 @@
   margin: 0 auto;
 }
 
-/* query for container size */
+// !query for container size
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
@@ -41,7 +49,54 @@
   }
 }
 
-/* ----- FOOTER ----- */
+/* ----- Header ----- */
+header.topbar {
+  background-color: $secondary;
+  color: $pure;
+  padding: 0.3rem 0;
+}
+
+header.topbar .icons a {
+  color: $pure;
+  margin-right: 0.6rem;
+}
+
+header.topbar .auth > div a {
+  color: $pure;
+  text-decoration: none;
+}
+
+header.topbar .auth > div i {
+  margin-right: 0.35rem;
+}
+
+header.topbar .auth .divider {
+  padding: 0 1rem;
+}
+
+/* ----- Navbar ----- */
+// * Top-nav
+nav .top .contact h5,
+nav .top .time h5 {
+  font-family: "Raleway-black";
+  margin-bottom: 0.21rem;
+}
+
+nav .top .contact h6,
+nav .top .time h6 {
+  font-family: "Raleway-medium";
+  letter-spacing: 0.025rem;
+  font-size: 0.75rem;
+  color: $ternary;
+}
+
+nav .top .contact i,
+nav .top .time i {
+  margin-right: 0.7rem;
+  color: $primary;
+}
+
+/* ----- Footer ----- */
 .footer {
   background: $footer;
   color: $heaven;
