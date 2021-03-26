@@ -50,7 +50,7 @@
           <div>
             <i class="fas fa-user-plus"></i>
             <!-- TODO: Add Ragistration page link -->
-            <a href="">Register Now</a>
+            <a href="{% url 'accounts-register' %}">Register Now</a>
           </div>
           <span class="divider">|</span>
           <div>
@@ -94,6 +94,13 @@
     <!-- *Navbar End -->
 
     <div class="container">
+      {% if messages %}
+        {% for message in messages %}
+          <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
       {% block content %}{% endblock %}
     </div>
 
