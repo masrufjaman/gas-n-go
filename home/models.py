@@ -7,7 +7,7 @@ class Customer (models.Model):
     Customer_License=models.CharField(max_length=50)
     Customer_Mail=models.CharField(max_length=100)
 
-class Service Centre (models.Model):
+class Service_Centre (models.Model):
     Company_Name=models.CharField(max_length=50)
     ID=models.CharField(max_length=15)
     Contact_Number=models.CharField(max_length=14)
@@ -27,7 +27,7 @@ class Supplier (models.Model):
     Contact_Number=models.CharField(max_length=14)
     Mail_Address=models.CharField(max_length=100)
 
-class Pump Service (models.Model):
+class Pump_Service (models.Model):
     Name=models.CharField(max_length=50)
     ID=models.CharField(max_length=15)
     Contact_Number=models.CharField(max_length=14)
@@ -55,7 +55,7 @@ class Stock (models.Model):
     Stock_item=models.CharField(max_length=50)
     Stock_type=models.CharField(max_length=50)
 
-class Booking System (models.Model):
+class Booking_System (models.Model):
     Serial_Number=models.CharField(max_length=100)
     Confirmation_Code=models.CharField(max_length=50)
     Payment_type=models.CharField(max_length=50)
