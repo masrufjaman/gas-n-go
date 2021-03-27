@@ -85,4 +85,26 @@
   padding: 0;
   color: #fff;
 }
+
+/* ----- Brands ----- */
+.brands {
+  margin: 20px auto;
+}
+
+.col-brands {
+  width: 160px;
+  margin: 15px;
+}
+
+.col-brands img {
+  width: 100%;
+  cursor: pointer;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.col-brands img:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
 /*# sourceMappingURL=home.css.map */

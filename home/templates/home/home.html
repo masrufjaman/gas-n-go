@@ -53,3 +53,28 @@
 </div>
 {% endblock content %}
 <!-- *Content End -->
+
+<!-- *Brands Start -->
+{% block brands %}
+<!-- !Link -->
+<link rel="stylesheet" href="{% static 'home/styles/main.css' %}" />
+<link rel="stylesheet" href="{% static 'home/styles/home.css' %}" />
+<!-- !Link -->
+
+<div class="brands">
+  <div class="small-container">
+    <div class="row flex justify-center">
+      <div class="col-brands">
+        <img src="{% static 'home/images/logo-castrol.png' %}" alt="" />
+      </div>
+      <div class="col-brands">
+        <img src="{% static 'home/images/logo-lucas.png' %}" alt="" />
+      </div>
+      <div class="col-brands">
+        <img src="{% static 'home/images/logo-shell.png' %}" alt="" />
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock brands %}
+<!-- *Brands End -->
