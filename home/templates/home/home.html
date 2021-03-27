@@ -1,93 +1,55 @@
+{% extends "home/base.html" %} {% load static %}
 
+<!-- *Content Start -->
+{% block content %}
+<!-- !Links -->
+<!-- * css link -->
+<link rel="stylesheet" href="{% static 'home/styles/home.css' %}" />
 
- 
-{% extends "home/base.html" %} {% load static %}{% block content %}
-<link rel="stylesheet" href="{% static 'home/main.css' %}" />
-{% comment %} <!DOCTYPE html>
-<html>
-<head>
-<style>
+<!-- * icons link -->
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<!-- !Links -->
 
-.box {
-  float: left;
-  width: 33.33%;
-  padding: 95px;
-}
-
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-</style>
-</head>
-<body>
-
-
-<p> </p>
-
-<div class="clearfix">
-  <div class="box" style="background-color:#bbb">
-  <p>                                          </p>
-  </div>
-  <div class="box" style="background-color:#ccc">
-  <p>                                            </p>
-  </div>
-  <div class="box" style="background-color:#ddd">
-  <p>                                             </p>
-  </div>
-</div>
-
-<head>
-    <style>
-    * {
-      box-sizing: border-box
-    }
-    
-    .box {
-      float: left;
-      width: 33.33%;
-      padding: 95px;
-    }
-    
-    .clearfix::after {
-      content: "";
-      clear: both;
-      display: table;
-    }
-    </style>
-    </head>
-    <body>
-    
-    <p>    </p>
-    
-    <div class="clearfix">
-      <div class="box" style="background-color:#bbb">
-      <p>                                           </p>
-      </div>
-      <div class="box" style="background-color:#ccc">
-      <p>                                                </p>
-      </div>
-      <div class="box" style="background-color:#ddd">
-      <p>                                                   </p>
-      </div>
+<div class="container_two">
+  <div class="box">
+    <div class="icon">
+      <i class="fas fa-tools"></i>
     </div>
-    
-    </body>
-</body>
-</html> {% endcomment %}
-<div class="clearfix">
-  <div class="box" >
-  </div>
-  <div class="box" >
-  </div>
-  <div class="box" >
+    <div class="content">
+      <h3>Service Centre</h3>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque
+        quibusdam ex et reiciendis quasi fugiat.
+      </p>
     </div>
-  <div class="box" >
   </div>
-  <div class="box" >
+  <div class="box">
+    <div class="icon">
+      <i class="fas fa-gas-pump"></i>
+    </div>
+    <div class="content">
+      <h3>Load Oil/Gas</h3>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque
+        quibusdam ex et reiciendis quasi fugiat.
+      </p>
+    </div>
   </div>
-  <div class="box" >
+  <div class="box">
+    <div class="icon">
+      <i class="fas fa-store-alt"></i>
+    </div>
+    <div class="content">
+      <h3>Parts Store</h3>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque
+        quibusdam ex et reiciendis quasi fugiat.
+      </p>
+    </div>
   </div>
 </div>
 {% endblock content %}
+<!-- *Content End -->
