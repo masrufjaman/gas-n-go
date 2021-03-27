@@ -1,23 +1,33 @@
-{% extends "home/base.html" %} {% block content %}
-<form action="register" method="POST">
-  {% csrf_token %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <div class="content-section">
-    <form action="" method="POST">
-      {% csrf_token %}
-      <fieldset class="form.group">
-        <legend class="border-bottom mb-4">Join Today</legend>
-        {{ form }}
-      </fieldset>
-      <div class="form-group">
-        <button class="btn btn-outline-info">Sign Up</button>
-      </div>
-    </form>
-    <div class="border-top pt-3">
-      <small class="text-muted"
-        >Already Have An Account? <a class="ml-2" href="#">Sign In</a></small
-      >
-    </div>
-  </div>
-</form>
-{% endblock content %}
+    <!-- ! Links -->
+    <!-- * css link -->
+    <link rel="stylesheet" href="{% static 'accounts/style.css' %}" />
+
+    <!-- * icons link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+
+    <!-- * Fonts link -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ! Links -->
+
+    {% if title %}
+    <title>Gas N Go || {{ title }}</title>
+    {% else %}
+    <title>Gas N Go</title>
+    {% endif %}
+  </head>
+  <body> gas n go </body>
+  </html>
