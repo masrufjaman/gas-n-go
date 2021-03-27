@@ -6,7 +6,7 @@
   position: relative;
   width: 1200px;
   height: 300px;
-  margin: 100px auto;
+  margin-bottom: 150px;
 }
 
 .container_two .box {
@@ -82,9 +82,44 @@
   color: #fff;
 }
 
+/* ----- Title ----- */
+.section_title {
+  margin-top: 50px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.section_title h2 {
+  color: $title;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.brand_border .fa.fa-minus {
+  color: $heaven;
+  font-size: 8px;
+  height: 2px;
+  background: $primary none repeat scroll 0 0;
+  width: 100px;
+}
+.brand_border .fas.fa-ring,
+.fas.fa-car {
+  font-size: 14px;
+}
+
+.section_title p {
+  color: $title;
+  font-size: 14px;
+  line-height: 25px;
+  padding: 14px 0;
+}
+
 /* ----- Brands ----- */
 .brands {
-  margin: 20px auto;
+  margin-top: -3%;
+  margin-bottom: 20px;
 }
 
 .col-brands {
