@@ -8,7 +8,7 @@
 
     <!-- ! Links -->
     <!-- * css link -->
-    <link rel="stylesheet" href="{% static 'home/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/styles/main.css' %}" />
 
     <!-- * icons link -->
     <link
@@ -93,16 +93,21 @@
     </nav>
     <!-- *Navbar End -->
 
+    <!-- *Content -->
     <div class="container">
-      {% if messages %}
-        {% for message in messages %}
-          <div class="alert alert-{{ message.tags }}">
-            {{ message }}
-          </div>
-        {% endfor %}
-      {% endif %}
-      {% block content %}{% endblock %}
+      {% block content %}
+      
+      {% endblock %}
     </div>
+    <!-- *Content -->
+
+    <!-- *Brands -->
+    
+      {% block brands %}
+        
+      {% endblock brands %}
+    
+    <!-- *Brands -->
 
     <!-- * Footer Start -->
     <div class="footer">

@@ -1,0 +1,138 @@
+// !import color variable
+@import "./colorsVar";
+
+/* ----- Main Section ----- */
+.container_two {
+  position: relative;
+  width: 1200px;
+  height: 300px;
+  margin-bottom: 150px;
+}
+
+.container_two .box {
+  position: relative;
+  width: calc(400px - 30px);
+  height: calc(300px - 30px);
+  background: $secondary;
+  float: left;
+  margin: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.container_two .box .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $primary;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.container_two .box:hover .icon {
+  top: 20px;
+  left: calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.container_two .box .icon .fas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  transition: 0.5s;
+  color: #fff;
+}
+
+.container_two .box:hover .icon .fas {
+  font-size: 40px;
+}
+
+.container_two .box .content {
+  position: absolute;
+  top: 100%;
+  height: calc(100% - 100px);
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.container_two .box:hover .content {
+  top: 100px;
+  opacity: 1;
+}
+
+.container_two .box .content h3 {
+  margin: 0 0 10px;
+  padding: 0;
+  color: #fff;
+  font-size: 24px;
+}
+.container_two .box .content p {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+/* ----- Title ----- */
+.section_title {
+  margin-top: 50px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.section_title h2 {
+  color: $title;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.brand_border .fa.fa-minus {
+  color: $heaven;
+  font-size: 8px;
+  height: 2px;
+  background: $primary none repeat scroll 0 0;
+  width: 100px;
+}
+.brand_border .fas.fa-ring,
+.fas.fa-car {
+  font-size: 14px;
+}
+
+.section_title p {
+  color: $title;
+  font-size: 14px;
+  line-height: 25px;
+  padding: 14px 0;
+}
+
+/* ----- Brands ----- */
+.brands {
+  margin-top: -3%;
+  margin-bottom: 20px;
+}
+
+.col-brands {
+  width: 160px;
+  margin: 15px;
+}
+
+.col-brands img {
+  width: 100%;
+  cursor: pointer;
+  filter: grayscale(100%);
+}
+
+.col-brands img:hover {
+  filter: grayscale(0%);
+}
