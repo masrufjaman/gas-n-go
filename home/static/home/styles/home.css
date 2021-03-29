@@ -14,7 +14,7 @@
   float: left;
   margin: 15px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   overflow: hidden;
   border-radius: 10px;
 }
@@ -44,7 +44,7 @@
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   font-size: 80px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -62,7 +62,7 @@
   text-align: center;
   padding: 20px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   opacity: 0;
@@ -136,11 +136,11 @@
   width: 100%;
   cursor: pointer;
   -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 .col-brands img:hover {
   -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
+  filter: grayscale(0%);
 }
 /*# sourceMappingURL=home.css.map */
