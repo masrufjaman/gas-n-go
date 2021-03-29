@@ -4,17 +4,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #00bfa6;
 }
 
 body,
 input {
-  font-family: "poppins", sans-serif;
+  font-family: 'poppins', 
+  sans-serif;
 }
 
 .container {
   position: relative;
-  width: 100s;
+  width: 100%;
   background-color: #fff;
   min-height: 100vh;
   overflow: hidden;
@@ -41,11 +41,14 @@ input {
   z-index: 6;
   transition: 1.8s ease-in-out;
 }
+
 form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 5rem;
+  pad: 5rem;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
 }
@@ -69,6 +72,13 @@ form {
   position: relative;
 }
 
+.input-filed i{
+  text-align: center;
+  line-height: 55px;
+  color: #acacac;
+  font-size: 1.5rem;
+}
+
 .input-filed input {
   background: none;
   outline: none;
@@ -79,7 +89,8 @@ form {
   color: #333;
 }
 
-.input-field input:placeholder-shown {
+.input-field input:placeholder-shown
+ {
   color: #aaa;
   font-weight: 500;
 }
@@ -135,7 +146,7 @@ form {
   position: absolute;
   top: 50%;
   left: 75%;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, -50%);
   display: grid;
   grid-template-columns: 1fr;
   z-index: 5;
@@ -178,7 +189,7 @@ form.sign-up-form {
 }
 
 .right-panel {
-  padding: 3rem 17% 2rem 17%;
+  padding: 3rem 12% 2rem 17%;
 }
 
 .panel .content {
