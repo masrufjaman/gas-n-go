@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- ! Links -->
     <!-- * css link -->
-    <link rel="stylesheet" href="{% static 'accounts/styles/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'accounts/styles/login.css' %}" />
 
     <!-- * icons link -->
     <link
@@ -23,6 +23,38 @@
     {% endif %}
   </head>
   <body>
+    <!-- *Header start -->
+    <header class="topbar">
+      <div class="container_two flex justify-between items-center">
+        <div class="icons">
+          <a href="https://www.facebook.com/"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="https://twitter.com/?lang=en"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="https://google.com/"><i class="fab fa-google"></i></a>
+          <a href="https://www.instagram.com/"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href=""><i class="fab fa-search"></i></a>
+        </div>
+        <div class="auth flex items-center">
+          <div>
+            <i class="fas fa-home"></i>
+            <a href="{% url 'home-home' %}">Home</a>
+          </div>
+          <span class="divider">|</span>
+          <div>
+            <i class="fas fa-user-plus"></i>
+            <a href="{% url 'accounts-register' %}">Register Now</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- *Header end -->
+
+    <!-- Main content -->
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
@@ -120,6 +152,52 @@
         </div>
       </div>
     </div>
-    <script src="{% static 'accounts/js/app.js' %}"></script>
+    <!-- Main content -->
+
+    <!-- * Footer Start -->
+    <div class="footer">
+      <div class="container_two">
+        <div class="row flex">
+          <div class="footer-col-1">
+            <h3>Download our app</h3>
+            <p>Download App for android & ios mobile phone.</p>
+            <div class="app-logo">
+              <img src="{% static "home/images/play-store.png" %}" alt=""> <img
+              src="{% static "home/images/app-store.png" %}" alt="">
+            </div>
+          </div>
+          <div class="footer-col-2">
+            <img src="" alt="" />
+            <p>Our Purpose Is To Sustainable Make the pleasure.</p>
+          </div>
+          <div class="footer-col-3">
+            <h3>Useful Links</h3>
+            <ul>
+              <li>Membership</li>
+              <li>Blog Post</li>
+              <li>Return Policy</li>
+              <li>Join Affiliate</li>
+            </ul>
+          </div>
+          <div class="footer-col-4">
+            <h3>Follow Us</h3>
+            <ul>
+              <li>Facebook</li>
+              <li>Twitter</li>
+              <li>Instagram</li>
+              <li>YouTube</li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+
+        <p class="copyright">
+          <i class="fa fa-copyright"></i> Copyright 2021-2022 |
+          <a href=""><strong style="color: #eebf00">Gas N Go</strong></a>
+        </p>
+      </div>
+    <!-- * Footer End -->
+
+    <script src="{% static 'accounts/js/login.js' %}"></script>
   </body>
 </html>
