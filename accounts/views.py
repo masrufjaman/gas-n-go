@@ -5,3 +5,7 @@ from django.contrib import messages
 
 def register(request):
     return render(request, 'accounts/register.html', {'title': 'Register'})
+
+
+def login(request):
+    return render(request, 'accounts/login.html', {'title': 'Login'})
