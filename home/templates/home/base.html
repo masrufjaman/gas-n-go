@@ -34,23 +34,21 @@
     <header class="topbar">
       <div class="container flex justify-between items-center">
         <div class="icons">
-          <a href=""><i class="fab fa-facebook"></i></a>
-          <a href=""><i class="fab fa-twitter"></i></a>
-          <a href=""><i class="fab fa-google"></i></a>
-          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+          <a href="https://google.com/"><i class="fab fa-google"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
           <a href=""><i class="fab fa-search"></i></a>
         </div>
         <div class="auth flex items-center">
           <div>
             <i class="fas fa-users"></i>
-            <!-- TODO: Add login page link -->
-            <a href="">Log in</a>
+            <a href="{% url 'accounts-login' %}">Log in</a>
           </div>
           <span class="divider">|</span>
           <div>
             <i class="fas fa-user-plus"></i>
-            <!-- TODO: Add Ragistration page link -->
-            <a href="">Register Now</a>
+            <a href="{% url 'accounts-register' %}">Register Now</a>
           </div>
           <span class="divider">|</span>
           <div>
@@ -90,11 +88,28 @@
         </div>
       </div>
       <!-- *Top-nav End -->
+      
+    <!-- *Bottom-nav Start -->
+    <div class="navbar">
+      <div class="container flex justify-center">
+        <a href="" class="active">Home</a>
+        <a href="">About Us</a>
+        <a href="">Contact Us</a>
+      </div>
+    </div>
+    <!-- *Bottom-nav End -->
     </nav>
     <!-- *Navbar End -->
 
     <!-- *Content -->
     <div class="container">
+      {% if messages %}
+        {% for message in messages %}
+          <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
       {% block content %}
       
       {% endblock %}
@@ -148,7 +163,7 @@
 
         <p class="copyright">
           <i class="fa fa-copyright"></i> Copyright 2021-2022 |
-          <strong style="color: #eebf00">Gas N Go</strong>
+          <a href=""><strong style="color: #eebf00">Gas N Go</strong></a>
         </p>
       </div>
     </class=>
