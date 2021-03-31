@@ -101,6 +101,26 @@ nav .top .time i {
   color: $primary;
 }
 
+// *Bottom-nav
+nav .navbar a {
+  text-decoration: none;
+  color: $secondary;
+  font-family: "Raleway-bold";
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+nav .navbar a.active {
+  background: $primary;
+  color: $pure;
+}
+
+nav .navbar a.hover {
+  background: $primary;
+  color: $pure;
+}
+
 /* ----- Footer ----- */
 .footer {
   background: $footer;
