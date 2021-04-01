@@ -1,3 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
-# Create your views here.
+def service(request):
+    return render(request, 'services/service.html', {'title': 'Service'})
