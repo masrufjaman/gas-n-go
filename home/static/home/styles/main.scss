@@ -101,6 +101,11 @@ nav .top .time i {
   color: $primary;
 }
 
+nav .top .branding img {
+  max-width: 10%;
+  max-height: 10%;
+}
+
 // *Bottom-nav
 nav .navbar a {
   text-decoration: none;
