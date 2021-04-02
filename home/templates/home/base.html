@@ -113,6 +113,13 @@
         {% if request.path == help %}
           class="active"
         {% endif %}
+        >Help</a>
+        
+        {% url '' as help %}
+        <a href="{% url 'home-help' %}"
+        {% if request.path == help %}
+          class="active"
+        {% endif %}
         >Contact Us</a>
       </div>
     </div>
