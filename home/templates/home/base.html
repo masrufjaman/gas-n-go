@@ -21,6 +21,9 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- *Favicon -->
+    <link rel="shortcut icon" type="image/jpg" href="{% static 'home/images/favicon.png' %}"/>
     <!-- ! Links -->
 
     {% if title %}
@@ -75,7 +78,7 @@
           </div>
           <!-- !Logo -->
           <div class="branding">
-            <img src="{% static "home/images/logo.png" %}" alt="" />
+            <img src="{% static 'home/images/logo.png' %}" alt="" />
           </div>
           <div class="time flex items-center">
             <i class="far fa-clock"></i>
@@ -91,9 +94,21 @@
     <!-- *Bottom-nav Start -->
     <div class="navbar">
       <div class="container flex justify-center">
-        <a href="" class="active">Home</a>
-        <a href="">About Us</a>
-        <a href="">Contact Us</a>
+        {% if title %}
+          <a href="{% url 'home-home' %}">Home</a>
+        {% else %}
+          <a href="" class="active">Home</a>
+        {% endif %}
+        {% if title == title %}
+          <a href="{% url 'home-about' %}" class="active">About Us</a>
+        {% else %}
+          <a href="{% url 'home-about' %}">About Us</a>
+        {% endif %}
+        {% if title == help %}
+          <a href="{% url 'home-help' %}" class="active">Contact Us</a>
+        {% else %}
+          <a href="{% url 'home-help' %}">Contact Us</a>
+        {% endif %}
       </div>
     </div>
     <!-- *Bottom-nav End -->
