@@ -85,6 +85,10 @@ header.topbar .auth .divider {
   padding: 0 1rem;
 }
 
+header.topbar .icons img {
+  max-width: 20px;
+}
+
 /* ----- Navbar ----- */
 nav .top .contact h5,
 nav .top .time h5 {
@@ -107,7 +111,8 @@ nav .top .time i {
 }
 
 nav .top .branding img {
-  max-width: 30%;
+  max-width: 250px;
+  max-height: 250px;
 }
 
 nav .navbar a {
