@@ -21,6 +21,9 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- *Favicon -->
+    <link rel="shortcut icon" type="image/jpg" href="{% static 'home/images/favicon.png' %}"/>
     <!-- ! Links -->
 
     {% if title %}
@@ -34,6 +37,7 @@
     <header class="topbar">
       <div class="container flex justify-between items-center">
         <div class="icons">
+          <img src="{% static 'home/images/icon.png' %}" alt="">
           <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
           <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
           <a href="https://google.com/"><i class="fab fa-google"></i></a>
@@ -74,9 +78,8 @@
             </div>
           </div>
           <!-- !Logo -->
-          <div class="branding">
-            <!-- TODO: Make Branding logo -->
-            <img src="" alt="" />
+          <div class="branding justify-center">
+            <img src="{% static 'home/images/logo.png' %}" alt="" />
           </div>
           <div class="time flex items-center">
             <i class="far fa-clock"></i>
@@ -92,9 +95,32 @@
     <!-- *Bottom-nav Start -->
     <div class="navbar">
       <div class="container flex justify-center">
-        <a href="" class="active">Home</a>
-        <a href="">About Us</a>
-        <a href="">Contact Us</a>
+        {% url 'home-home' as home %}
+        <a href="{% url 'home-home' %}"
+        {% if request.path == home %}
+          class="active"
+        {% endif %}
+        >Home</a>
+        
+        {% url 'home-about' as about %}
+        <a href="{% url 'home-about' %}" 
+        {% if request.path == about %}
+          class="active"
+        {% endif %} >About Us</a>
+        
+        {% url 'home-help' as help %}
+        <a href="{% url 'home-help' %}"
+        {% if request.path == help %}
+          class="active"
+        {% endif %}
+        >Help</a>
+        
+        {% url '' as help %}
+        <a href="{% url 'home-help' %}"
+        {% if request.path == help %}
+          class="active"
+        {% endif %}
+        >Contact Us</a>
       </div>
     </div>
     <!-- *Bottom-nav End -->
@@ -132,12 +158,12 @@
             <h3>Download our app</h3>
             <p>Download App for android & ios mobile phone.</p>
             <div class="app-logo">
-              <img src="{% static "home/images/play-store.png" %}" alt=""> <img
-              src="{% static "home/images/app-store.png" %}" alt="">
+              <img src="{% static 'home/images/play-store.png' %}" alt=""> <img
+              src="{% static 'home/images/app-store.png' %}" alt="">
             </div>
           </div>
           <div class="footer-col-2">
-            <img src="" alt="" />
+            <img src="{% static 'home/images/logo.png' %}" alt="" />
             <p>Our Purpose Is To Sustainable Make the pleasure.</p>
           </div>
           <div class="footer-col-3">
