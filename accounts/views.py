@@ -7,8 +7,21 @@ from django.contrib import messages
 def register(request):
 
     if request.method == 'POST':
+        # *Login Part
         if request.POST.get('login'):
-            return redirect('home-help')
+            username = request.POST['username']
+            password = request.POST['password']
+
+            user = auth.authenticate(username=username, password=password)
+            if user is not None:
+                auth.login(request, user)
+                return redirect('home-home')
+            else:
+                messages.error(
+                    request, f'Invalid credentials...')
+                return redirect('accounts-login')
+
+        # *Registration part
         else:
             username = request.POST['username']
             email = request.POST['email']
@@ -34,8 +47,21 @@ def register(request):
 
 def login(request):
     if request.method == 'POST':
+        # *Login Part
         if request.POST.get('login'):
-            return redirect('home-help')
+            username = request.POST['username']
+            password = request.POST['password']
+
+            user = auth.authenticate(username=username, password=password)
+            if user is not None:
+                auth.login(request, user)
+                return redirect('home-home')
+            else:
+                messages.error(
+                    request, f'Invalid credentials...')
+                return redirect('accounts-login')
+
+        # *Registration part
         else:
             username = request.POST['username']
             email = request.POST['email']

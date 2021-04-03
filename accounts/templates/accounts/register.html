@@ -100,6 +100,15 @@
             </div>
           </form>
           <form action="login" method="POST" class="sign-in-form">
+            <!-- Messages -->
+            {% if messages %}
+              {% for message in messages %}
+              <div class="alert alert-{{ message.tags }}">
+                <strong style="color: #eebf00">{{ message }}</strong>
+              </div>
+              {% endfor %}
+            {% endif %}
+            <!-- Messages -->
             <h2 class="title">Sign in</h2>
             {% csrf_token %}
             <div class="input-field">
