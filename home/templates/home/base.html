@@ -111,30 +111,26 @@
         {% url 'home-home' as home %}
         <a href="{% url 'home-home' %}"
         {% if request.path == home %}
-          class="active"
-        {% endif %}
-        >Home</a>
+         class="active"
+        {% endif %}>Home</a>
         
         {% url 'home-about' as about %}
-        <a href="{% url 'home-about' %}" 
+        <a href="{% url 'home-about' %}"
         {% if request.path == about %}
           class="active"
-        {% endif %} 
-        >About Us</a>
+        {% endif %}>About Us</a> 
         
         {% url 'home-help' as help %}
         <a href="{% url 'home-help' %}"
         {% if request.path == help %}
           class="active"
-        {% endif %}
-        >Help</a>
+        {% endif %}>Help</a>
         
-        {% url '' as help %}
-        <a href="{% url 'home-help' %}"
-        {% if request.path == help %}
-          class="active"
-        {% endif %}
-        >Contact Us</a>
+        {% url 'home-contact' as contact %}
+        <a href="{% url 'home-contact' %}"
+        {% if request.path == contact %}
+           class="active"
+        {% endif %}>Contact Us</a>
       </div>
     </div>
     <!-- *Bottom-nav End -->
