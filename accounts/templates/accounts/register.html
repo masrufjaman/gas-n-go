@@ -99,17 +99,27 @@
               </a>
             </div>
           </form>
-          <form action="#" class="sign-in-form">
+          <form action="login" method="POST" class="sign-in-form">
+            <!-- Messages -->
+            {% if messages %}
+              {% for message in messages %}
+              <div class="alert alert-{{ message.tags }}">
+                <strong style="color: #eebf00">{{ message }}</strong>
+              </div>
+              {% endfor %}
+            {% endif %}
+            <!-- Messages -->
             <h2 class="title">Sign in</h2>
+            {% csrf_token %}
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+              <input type="text" name="username" placeholder="Username" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" name="password" placeholder="Password" />
             </div>
-            <input type="submit" value="Login" class="btn solid" />
+            <input type="submit" value="Login" class="btn solid" name="login"/>
             <p class="social-text">Or Sign in with social platforms</p>
             <div class="social-media">
               <a href="#" class="social-icon">
