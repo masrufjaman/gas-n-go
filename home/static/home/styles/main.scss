@@ -79,6 +79,11 @@ header.topbar .auth .divider {
   padding: 0 1rem;
 }
 
+header.topbar .icons img {
+  max-width: 20px;
+  margin-right: 1rem;
+}
+
 /* ----- Navbar ----- */
 // * Top-nav
 nav .top .contact h5,
@@ -99,6 +104,11 @@ nav .top .contact i,
 nav .top .time i {
   margin-right: 0.7rem;
   color: $primary;
+}
+
+nav .top .branding img {
+  max-width: 250px;
+  max-height: 250px;
 }
 
 // *Bottom-nav
