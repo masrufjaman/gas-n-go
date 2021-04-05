@@ -2,12 +2,13 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Links -->
-    <link rel="stylesheet" href="{% static "services/styles/service.css" %}">
+    <link rel="stylesheet" href="{% static 'services/styles/service.css' %}">
     <!-- Links -->
 
     {% if title %}
@@ -15,8 +16,26 @@
     {% else %}
     <title>Gas N Go</title>
     {% endif %}
-  </head>
-  <body>
-    <h1>Our Service Page</h1>
-  </body>
+</head>
+Which Service Do You Want ?
+
+<body>
+    <form>
+        <input type="checkbox" id="service-1" name="service-1" value="Car Wash">
+        <lebel for="service1">Car Wash</lebel>
+        <input type="checkbox" id="service-2" name="service-2" value="Kerosene">
+        <lebel for="service2">Kerosene</lebel>
+        <input type="checkbox" id="service-3" name="service-3" value="Diesel">
+        <lebel for="service3">Diesel</lebel>
+        <input type="checkbox" id="service-4" name="service-4" value="Octane">
+        <lebel for="service4">Octane</lebel>
+        <input type="checkbox" id="service-5" name="service-5" value="Petrol">
+        <lebel for="service5">Petrol</lebel>
+        <input type="checkbox" id="service-6" name="service-6" value="Car Parts">
+        <lebel for="service6">Car Parts</lebel>
+
+
+    </form>
+</body>
+
 </html>
