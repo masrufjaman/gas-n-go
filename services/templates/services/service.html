@@ -1,4 +1,11 @@
-{% extends "home/base.html" %} {% load static %} {% block content %}
+{% extends "home/base.html" %} {% load static %}
+<link
+  rel="stylesheet"
+  href='{%
+static "services/styles/service.css" %}'
+/>
+<script src="https://unpkg.com/flickity@2.0.11/dist/flickity.pkgd.min.js"></script>
+{% block checkbox %}
 <div class="container">
   <h3>Which Services do you Want ?</h3>
 </div>
@@ -35,4 +42,92 @@
     <lebel for="service10">Octane</lebel> &nbsp; &nbsp;
   </form>
 </div>
-{% endblock content %}
+{% endblock checkbox %} {% block slider %}
+<div class="container">
+  <div class="carousel-wrapper">
+    <div class="carousel" data-flickity>
+      <div class="carousel-cell">
+        <h3>Petrol Pump 1</h3>
+        <a class="more" href="#">Explore More</a>
+        <img src='{% static "services/images/pic.jpg" %}' />
+        <div class="line"></div>
+        <div class="price">
+          <span><sup></sup>Uttara</span>
+        </div>
+      </div>
+      <div class="carousel-cell">
+        <h3>Petrol Pump 2</h3>
+        <a class="more" href="#">Explore More</a>
+        <img src='{% static "services/images/pic.jpg" %}' />
+        <div class="line"></div>
+        <div class="price">
+          <span><sup></sup>Dhanmondi</span>
+        </div>
+      </div>
+      <div class="carousel-cell">
+        <h3>Petrol Pump 3</h3>
+        <a class="more" href="#">Explore More</a>
+        <img src='{% static "services/images/pic.jpg" %}' />
+        <div class="line"></div>
+        <div class="price">
+          <span><sup></sup>Kakrail</span>
+        </div>
+      </div>
+      <div class="carousel-cell">
+        <h3>Petrol Pump 4</h3>
+        <a class="more" href="#">Explore More</a>
+        <img src='{% static "services/images/pic.jpg" %}' />
+        <div class="line"></div>
+        <div class="price">
+          <span><sup></sup>Mirpur</span>
+        </div>
+      </div>
+      <div class="carousel-cell">
+        <h3>Petrol Pump 5</h3>
+        <a class="more" href="#">Explore More</a>
+        <img src='{% static "services/images/pic.jpg" %}' />
+        <div class="line"></div>
+        <div class="price">
+          <span><sup></sup>Malibagh</span>
+        </div>
+      </div>
+      <div class="carousel-cell">
+        <h3>Petrol Pump 6</h3>
+        <a class="more" href="#">Explore More</a>
+        <img src='{% static "services/images/pic.jpg" %}' />
+        <div class="line"></div>
+        <div class="price">
+          <span><sup></sup>Bashundhara</span>
+        </div>
+      </div>
+      <div class="carousel-cell">
+        <h3>Petrol Pump 7</h3>
+        <a class="more" href="#">Explore More</a>
+        <img src='{% static "services/images/pic.jpg" %}' />
+        <div class="line"></div>
+        <div class="price">
+          <span><sup></sup>Banani</span>
+        </div>
+      </div>
+      <div class="carousel-cell">
+        <h3>Petrol Pump 8</h3>
+        <a class="more" href="#">Explore More</a>
+        <img src='{% static "services/images/pic.jpg" %}' />
+        <div class="line"></div>
+        <div class="price">
+          <span><sup></sup>Gulshan</span>
+        </div>
+      </div>
+      <div class="carousel-cell">
+        <h3>Petrol Pump 9</h3>
+        <a class="more" href="#">Explore More</a>
+        <img src='{% static "services/images/pic.jpg" %}' />
+        <div class="line"></div>
+        <div class="price">
+          <span><sup></sup>Badda</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock slider %}
