@@ -1,9 +1,4 @@
-{% extends "home/base.html" %}
+{% extends "home/base.html" %} {% block content %}
+<h2>Here is the list of items</h2>
 
-{% block content %}
-    <h2>Here is the list of items</h2>
-
-    {% for item in items %}
-      {{ item }}
-    {% endfor %}
-{% endblock content %}
+{% for item in items %} {{ item }} {% endfor %} {% endblock content %}
