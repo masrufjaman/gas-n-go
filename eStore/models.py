@@ -2,9 +2,15 @@ from django.db import models
 from accounts.models import *
 
 
+CATEGORY_CHOICES = (
+    ('P', 'Parts'),
+    ('E', 'Engine'),
+    ('O', 'Oil')
+)
 class Item(models.Model):
     name = models.CharField(max_length=50)
     price = models.FloatField()
+    category = models.CharField(choices=CATEGORY_CHOICES, max_length=2)
 
     def __str__(self):
         return self.name
