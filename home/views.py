@@ -8,5 +8,6 @@ def home(request):
 def about(request):
     return render(request, 'home/about.html', {'title': 'About'})
 
+
 def contact(request):
     return render(request, 'home/contact.html', {'title': 'Conatct'})
