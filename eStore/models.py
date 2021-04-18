@@ -7,9 +7,12 @@ CATEGORY_CHOICES = (
     ('E', 'Engine'),
     ('O', 'Oil')
 )
+
+
 class Item(models.Model):
     name = models.CharField(max_length=50)
     price = models.FloatField()
+    discount_price = models.FloatField(blank=True, null=True)
     category = models.CharField(choices=CATEGORY_CHOICES, max_length=2)
 
     def __str__(self):

@@ -192,7 +192,7 @@
     </div>
 
     <div class="product-center container">
-      {% for item in items %} {% endfor %}
+      {% for item in items %}
       <div class="product">
         <div class="product-header">
           <img
@@ -208,7 +208,7 @@
         </div>
         <div class="product-footer">
           <a href="#">
-            <h3>{{ item.title }}</h3>
+            <h3>{{ item.name }}</h3>
           </a>
           <div class="rating">
             <i class="bx bxs-star"></i>
@@ -217,9 +217,13 @@
             <i class="bx bxs-star"></i>
             <i class="bx bxs-star"></i>
           </div>
-          <h4 class="price">${{ item.price }}</h4>
+          <h4 class="price">
+            $ {% if item.discount_price %} {{ item.discount_price }} {% else %}
+            {{ item.price }} {% endif %}
+          </h4>
         </div>
       </div>
+      {% endfor %}
     </div>
   </section>
 
