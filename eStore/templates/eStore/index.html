@@ -10,6 +10,10 @@
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
 />
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js "></script>
+<!-- Custom Script -->
+<script src='{% static "eStore/js/index.js" %}'></script>
 <!-- !Links -->
 
 <!-- Header -->
@@ -84,7 +88,10 @@
     <div class="product-center container">
       <div class="product">
         <div class="product-header">
-          <img src="{% static 'eStore/car steering wheel.jpg' %}" alt="" />
+          <img
+            src="{% static 'eStore/images/car steering wheel.jpg' %}"
+            alt=""
+          />
           <ul class="icons">
             <span><i class="bx bx-heart"></i></span>
             <span><i class="bx bx-shopping-bag"></i></span>
@@ -464,9 +471,5 @@
     </div>
   </section>
 </main>
-<!-- GSAP -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js "></script>
-<!-- Custom Script -->
-<script src="./js/index.js "></script>
 {% endblock content %}
 <!-- *Brands End -->
