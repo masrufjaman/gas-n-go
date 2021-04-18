@@ -192,6 +192,7 @@
     </div>
 
     <div class="product-center container">
+      {% for item in items %} {% endfor %}
       <div class="product">
         <div class="product-header">
           <img
@@ -207,7 +208,7 @@
         </div>
         <div class="product-footer">
           <a href="#">
-            <h3>Glass Cleaner</h3>
+            <h3>{{ item.title }}</h3>
           </a>
           <div class="rating">
             <i class="bx bxs-star"></i>
@@ -216,184 +217,7 @@
             <i class="bx bxs-star"></i>
             <i class="bx bxs-star"></i>
           </div>
-          <h4 class="price">220 BDT</h4>
-        </div>
-      </div>
-      <div class="product">
-        <div class="product-header">
-          <img src="{% static 'eStore/images/moto cycle tire.jpg' %}" alt="" />
-
-          <ul class="icons">
-            <span><i class="bx bx-heart"></i></span>
-            <span><i class="bx bx-shopping-bag"></i></span>
-            <span><i class="bx bx-search"></i></span>
-          </ul>
-        </div>
-        <div class="product-footer">
-          <a href="#">
-            <h3>Motorcycle Tire</h3>
-          </a>
-          <div class="rating">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bx-star"></i>
-          </div>
-          <h4 class="price">4840 BDT</h4>
-        </div>
-      </div>
-      <div class="product">
-        <div class="product-header">
-          <img src="{% static 'eStore/images/moto gas tank.jpg' %}" alt="" />
-
-          <ul class="icons">
-            <span><i class="bx bx-heart"></i></span>
-            <span><i class="bx bx-shopping-bag"></i></span>
-            <span><i class="bx bx-search"></i></span>
-          </ul>
-        </div>
-        <div class="product-footer">
-          <a href="#">
-            <h3>Motorcycle Gas Tank</h3>
-          </a>
-          <div class="rating">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bx-star"></i>
-          </div>
-          <h4 class="price">16084</h4>
-        </div>
-      </div>
-      <div class="product">
-        <div class="product-header">
-          <img
-            src="{% static 'eStore/images/motor cycle headlight.jpg' %}"
-            alt=""
-          />
-
-          <ul class="icons">
-            <span><i class="bx bx-heart"></i></span>
-            <span><i class="bx bx-shopping-bag"></i></span>
-            <span><i class="bx bx-search"></i></span>
-          </ul>
-        </div>
-        <div class="product-footer">
-          <a href="#">
-            <h3>Motorcycle Headlight</h3>
-          </a>
-          <div class="rating">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bx-star"></i>
-          </div>
-          <h4 class="price">1769 BDT</h4>
-        </div>
-      </div>
-      <div class="product">
-        <div class="product-header">
-          <img
-            src="{% static 'eStore/images/mobil-super-moto-20w-40-4t-fs-square-md.jpg' %}"
-            alt=""
-          />
-
-          <ul class="icons">
-            <span><i class="bx bx-heart"></i></span>
-            <span><i class="bx bx-shopping-bag"></i></span>
-            <span><i class="bx bx-search"></i></span>
-          </ul>
-        </div>
-        <div class="product-footer">
-          <a href="#">
-            <h3>Motorcycle Engine Oil</h3>
-          </a>
-          <div class="rating">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bx-star"></i>
-          </div>
-          <h4 class="price">950 BDT</h4>
-        </div>
-      </div>
-      <div class="product">
-        <div class="product-header">
-          <img src="{% static 'eStore/images/truck battery.jpg' %}" alt="" />
-
-          <ul class="icons">
-            <span><i class="bx bx-heart"></i></span>
-            <span><i class="bx bx-shopping-bag"></i></span>
-            <span><i class="bx bx-search"></i></span>
-          </ul>
-        </div>
-        <div class="product-footer">
-          <a href="#">
-            <h3>Car Battery</h3>
-          </a>
-          <div class="rating">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bx-star"></i>
-          </div>
-          <h4 class="price">12000 BDT</h4>
-        </div>
-      </div>
-      <div class="product">
-        <div class="product-header">
-          <img src="{% static 'eStore/images/car headlight.jpg' %}" alt="" />
-
-          <ul class="icons">
-            <span><i class="bx bx-heart"></i></span>
-            <span><i class="bx bx-shopping-bag"></i></span>
-            <span><i class="bx bx-search"></i></span>
-          </ul>
-        </div>
-        <div class="product-footer">
-          <a href="#">
-            <h3>Car Headlight</h3>
-          </a>
-          <div class="rating">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-          </div>
-          <h4 class="price">3188 BDT</h4>
-        </div>
-      </div>
-      <div class="product">
-        <div class="product-header">
-          <img
-            src="{% static 'eStore/images/truck rubber bushing.jpg' %}"
-            alt=""
-          />
-
-          <ul class="icons">
-            <span><i class="bx bx-heart"></i></span>
-            <span><i class="bx bx-shopping-bag"></i></span>
-            <span><i class="bx bx-search"></i></span>
-          </ul>
-        </div>
-        <div class="product-footer">
-          <a href="#">
-            <h3>Truck Rubber Bushing</h3>
-          </a>
-          <div class="rating">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bx-star"></i>
-          </div>
-          <h4 class="price">2828 BDT</h4>
+          <h4 class="price">${{ item.price }}</h4>
         </div>
       </div>
     </div>
