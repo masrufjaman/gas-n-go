@@ -9,5 +9,5 @@ def about(request):
     return render(request, 'home/about.html', {'title': 'About'})
 
 
-def help(request):
-    return render(request, 'home/help.html', {'title': 'Help'})
+def contact(request):
+    return render(request, 'home/contact.html', {'title': 'Conatct'})
