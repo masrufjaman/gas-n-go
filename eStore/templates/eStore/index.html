@@ -1,0 +1,475 @@
+{% extends "home/base.html" %} {% load static %}
+<!-- *Content Start -->
+{% block content %}
+<!-- !Links -->
+<!-- * css link -->
+<link rel="stylesheet" href="{% static 'eStore/styles/index.css' %}" />
+
+<!-- Box icons -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+/>
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js "></script>
+<!-- Custom Script -->
+<script src='{% static "eStore/js/index.js" %}'></script>
+<!-- !Links -->
+
+<!-- Header -->
+<header id="home" class="header">
+  <!-- Hero -->
+  <img
+    src="{% static 'eStore/images/pic.6.jpg (1).png' %}"
+    alt=""
+    class="hero-img"
+  />
+
+  <div class="hero-content">
+    <h1>
+      <span>Vehicle Parts</span>
+      <span>Available Here</span>
+    </h1>
+    <a class="btn" href="#">shop now</a>
+  </div>
+</header>
+
+<!-- Main -->
+<main>
+  <section class="advert section">
+    <div class="advert-center container">
+      <div class="advert-box">
+        <div class="dotted">
+          <div class="content">
+            <h2>
+              Car <br />
+              Parts
+            </h2>
+            <h4></h4>
+          </div>
+        </div>
+        <img src="{% static 'eStore/images/parts.png' %}" alt="" />
+      </div>
+
+      <div class="advert-box">
+        <div class="dotted">
+          <div class="content">
+            <h2>
+              Motorcycle <br />
+              Parts
+            </h2>
+            <h4></h4>
+          </div>
+        </div>
+        <img src="{% static 'eStore/images/parts2.png' %}" alt="" />
+      </div>
+
+      <div class="advert-box">
+        <div class="dotted">
+          <div class="content">
+            <h2>
+              Truck <br />
+              Parts
+            </h2>
+            <h4></h4>
+          </div>
+        </div>
+        <img src="{% static 'eStore/images/car 2.png' %}" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured -->
+  <section class="section featured">
+    <div class="title">
+      <h1>Featured Products</h1>
+    </div>
+
+    <div class="product-center container">
+      <div class="product">
+        <div class="product-header">
+          <img
+            src="{% static 'eStore/images/car steering wheel.jpg' %}"
+            alt=""
+          />
+          <ul class="icons">
+            <span><i class="bx bx-heart"></i></span>
+            <span><i class="bx bx-shopping-bag"></i></span>
+            <span><i class="bx bx-search"></i></span>
+          </ul>
+        </div>
+        <div class="product-footer">
+          <a href="#">
+            <h3>Car Steering Wheel</h3>
+          </a>
+          <div class="rating">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          <h4 class="price">8000 BDT</h4>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-header">
+          <img src="{% static 'eStore/images/car tire.jpg' %}" alt="" />
+          <ul class="icons">
+            <span><i class="bx bx-heart"></i></span>
+            <span><i class="bx bx-shopping-bag"></i></span>
+            <span><i class="bx bx-search"></i></span>
+          </ul>
+        </div>
+        <div class="product-footer">
+          <a href="#">
+            <h3>Car Tire</h3>
+          </a>
+          <div class="rating">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          <h4 class="price">6300 BDT</h4>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-header">
+          <img src="{% static 'eStore/images/car battery.jpeg' %}" alt="" />
+          <ul class="icons">
+            <span><i class="bx bx-heart"></i></span>
+            <span><i class="bx bx-shopping-bag"></i></span>
+            <span><i class="bx bx-search"></i></span>
+          </ul>
+        </div>
+        <div class="product-footer">
+          <a href="#">
+            <h3>Car Battery</h3>
+          </a>
+          <div class="rating">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          <h4 class="price">9800 BDT</h4>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-header">
+          <img src="{% static 'eStore/images/windsheild.jpg' %}" alt="" />
+
+          <ul class="icons">
+            <span><i class="bx bx-heart"></i></span>
+            <span><i class="bx bx-shopping-bag"></i></span>
+            <span><i class="bx bx-search"></i></span>
+          </ul>
+        </div>
+        <div class="product-footer">
+          <a href="#">
+            <h3>Car Windsheild Glass</h3>
+          </a>
+          <div class="rating">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          <h4 class="price">2500 BDT</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Latest -->
+  <section class="section featured">
+    <div class="title">
+      <h1>Latest Products</h1>
+    </div>
+
+    <div class="product-center container">
+      <div class="product">
+        <div class="product-header">
+          <img
+            src="{% static 'eStore/images/car glass cleaner.jpg' %}"
+            alt=""
+          />
+
+          <ul class="icons">
+            <span><i class="bx bx-heart"></i></span>
+            <span><i class="bx bx-shopping-bag"></i></span>
+            <span><i class="bx bx-search"></i></span>
+          </ul>
+        </div>
+        <div class="product-footer">
+          <a href="#">
+            <h3>Glass Cleaner</h3>
+          </a>
+          <div class="rating">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+          </div>
+          <h4 class="price">220 BDT</h4>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-header">
+          <img src="{% static 'eStore/images/moto cycle tire.jpg' %}" alt="" />
+
+          <ul class="icons">
+            <span><i class="bx bx-heart"></i></span>
+            <span><i class="bx bx-shopping-bag"></i></span>
+            <span><i class="bx bx-search"></i></span>
+          </ul>
+        </div>
+        <div class="product-footer">
+          <a href="#">
+            <h3>Motorcycle Tire</h3>
+          </a>
+          <div class="rating">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          <h4 class="price">4840 BDT</h4>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-header">
+          <img src="{% static 'eStore/images/moto gas tank.jpg' %}" alt="" />
+
+          <ul class="icons">
+            <span><i class="bx bx-heart"></i></span>
+            <span><i class="bx bx-shopping-bag"></i></span>
+            <span><i class="bx bx-search"></i></span>
+          </ul>
+        </div>
+        <div class="product-footer">
+          <a href="#">
+            <h3>Motorcycle Gas Tank</h3>
+          </a>
+          <div class="rating">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          <h4 class="price">16084</h4>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-header">
+          <img
+            src="{% static 'eStore/images/motor cycle headlight.jpg' %}"
+            alt=""
+          />
+
+          <ul class="icons">
+            <span><i class="bx bx-heart"></i></span>
+            <span><i class="bx bx-shopping-bag"></i></span>
+            <span><i class="bx bx-search"></i></span>
+          </ul>
+        </div>
+        <div class="product-footer">
+          <a href="#">
+            <h3>Motorcycle Headlight</h3>
+          </a>
+          <div class="rating">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          <h4 class="price">1769 BDT</h4>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-header">
+          <img
+            src="{% static 'eStore/images/mobil-super-moto-20w-40-4t-fs-square-md.jpg' %}"
+            alt=""
+          />
+
+          <ul class="icons">
+            <span><i class="bx bx-heart"></i></span>
+            <span><i class="bx bx-shopping-bag"></i></span>
+            <span><i class="bx bx-search"></i></span>
+          </ul>
+        </div>
+        <div class="product-footer">
+          <a href="#">
+            <h3>Motorcycle Engine Oil</h3>
+          </a>
+          <div class="rating">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          <h4 class="price">950 BDT</h4>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-header">
+          <img src="{% static 'eStore/images/truck battery.jpg' %}" alt="" />
+
+          <ul class="icons">
+            <span><i class="bx bx-heart"></i></span>
+            <span><i class="bx bx-shopping-bag"></i></span>
+            <span><i class="bx bx-search"></i></span>
+          </ul>
+        </div>
+        <div class="product-footer">
+          <a href="#">
+            <h3>Car Battery</h3>
+          </a>
+          <div class="rating">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          <h4 class="price">12000 BDT</h4>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-header">
+          <img src="{% static 'eStore/images/car headlight.jpg' %}" alt="" />
+
+          <ul class="icons">
+            <span><i class="bx bx-heart"></i></span>
+            <span><i class="bx bx-shopping-bag"></i></span>
+            <span><i class="bx bx-search"></i></span>
+          </ul>
+        </div>
+        <div class="product-footer">
+          <a href="#">
+            <h3>Car Headlight</h3>
+          </a>
+          <div class="rating">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+          </div>
+          <h4 class="price">3188 BDT</h4>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-header">
+          <img
+            src="{% static 'eStore/images/truck rubber bushing.jpg' %}"
+            alt=""
+          />
+
+          <ul class="icons">
+            <span><i class="bx bx-heart"></i></span>
+            <span><i class="bx bx-shopping-bag"></i></span>
+            <span><i class="bx bx-search"></i></span>
+          </ul>
+        </div>
+        <div class="product-footer">
+          <a href="#">
+            <h3>Truck Rubber Bushing</h3>
+          </a>
+          <div class="rating">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          <h4 class="price">2828 BDT</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Banner -->
+  <section class="section">
+    <div class="product-banner">
+      <div class="left">
+        <img src="{% static 'eStore/images/images.jpg' %}" alt="" />
+      </div>
+      <div class="right">
+        <div class="content">
+          <h1>
+            <span>Collect All Your </span>
+            <span>Vehicle Parts Collection Here</span>
+          </h1>
+          <a class="btn" href="#">shop now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section">
+    <div class="testimonial-center container">
+      <div class="testimonial">
+        <span>&ldquo;</span>
+        <p>Quality is good. Getting nice mileage to my car.</p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+        </div>
+        <div class="img-cover">
+          <img src="{% static 'eStore/images/profile.png' %}" alt="" />
+        </div>
+        <h4>Masruf Jaman</h4>
+      </div>
+      <div class="testimonial">
+        <span>&ldquo;</span>
+        <p>
+          The customer service here is exceptional and very helpful. You can
+          purchase almost all car parts from here.
+        </p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+        <div class="img-cover">
+          <img src="{% static 'eStore/images/profile.png' %}" alt="" />
+        </div>
+        <h4>Anandah Rafi</h4>
+      </div>
+      <div class="testimonial">
+        <span>&ldquo;</span>
+        <p>Great Service and Fuel was a Good Price too.</p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+        <div class="img-cover">
+          <img src="{% static 'eStore/images/profile.png' %}" alt="" />
+        </div>
+        <h4>Humayra Mim</h4>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock content %}
+<!-- *Brands End -->
