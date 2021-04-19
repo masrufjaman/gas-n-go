@@ -45,21 +45,34 @@
           <a href=""><i class="fab fa-search"></i></a>
         </div>
         <div class="auth flex items-center">
+          <!-- When Login -->
+          {% if user.is_authenticated %}
           <div>
-            <i class="fas fa-users"></i>
-            <a href="{% url 'accounts-login' %}">Log in</a>
+            <i class="fab fa-hive"></i>
+            <a href="">{{user.username}}</a>
           </div>
-          <span class="divider">|</span>
-          <div>
-            <i class="fas fa-user-plus"></i>
-            <a href="{% url 'accounts-register' %}">Register Now</a>
-          </div>
-          <span class="divider">|</span>
-          <div>
+            <span class="divider">|</span>
+            <div>
+              <i class="fas fa-sign-out-alt"></i>
+              <a href="{% url 'accounts-logout' %}">Log out</a>
+            </div>
+            <span class="divider">|</span>
+            <div>
             <i class="fas fa-shopping-cart"></i>
             <!-- TODO: Add Payment page link -->
             <a href="">0 Items - ($0.00)</a>
           </div>
+          {% else %}
+            <div>
+              <i class="fas fa-users"></i>
+              <a href="{% url 'accounts-login' %}">Log in</a>
+            </div>
+            <span class="divider">|</span>
+            <div>
+              <i class="fas fa-user-plus"></i>
+              <a href="{% url 'accounts-register' %}">Register Now</a>
+            </div>
+          {% endif %}
         </div>
       </div>
     </header>
@@ -98,15 +111,14 @@
         {% url 'home-home' as home %}
         <a href="{% url 'home-home' %}"
         {% if request.path == home %}
-          class="active"
-        {% endif %}
-        >Home</a>
+         class="active"
+        {% endif %}>Home</a>
         
         {% url 'home-about' as about %}
-        <a href="{% url 'home-about' %}" 
+        <a href="{% url 'home-about' %}"
         {% if request.path == about %}
           class="active"
-        {% endif %} >About Us</a>
+        {% endif %}>About Us</a> 
         
         {% url 'home-contact' as contact %}
         <a href="{% url 'home-contact' %}"
@@ -185,7 +197,6 @@
           <a href=""><strong style="color: #eebf00">Gas N Go</strong></a>
         </p>
       </div>
-    </class=>
     <!-- * Footer End -->
   </body>
 </html>
