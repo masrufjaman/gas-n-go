@@ -120,17 +120,12 @@
           class="active"
         {% endif %}>About Us</a> 
         
-        {% url 'home-help' as help %}
-        <a href="{% url 'home-help' %}"
-        {% if request.path == help %}
-          class="active"
-        {% endif %}>Help</a>
-        
         {% url 'home-contact' as contact %}
         <a href="{% url 'home-contact' %}"
         {% if request.path == contact %}
-           class="active"
-        {% endif %}>Contact Us</a>
+          class="active"
+        {% endif %}
+        >Contact Us</a>
       </div>
     </div>
     <!-- *Bottom-nav End -->
