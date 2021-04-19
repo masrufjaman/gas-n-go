@@ -3,11 +3,15 @@ html {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-image: url(./image/pexels-pixabay-531880.jpg);
+  background-image: url("/static/home/images/Picture.jpg");
 }
 
 textarea {
   font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .wrapper {
@@ -118,7 +122,7 @@ p {
 h3.global-title {
   font-size: 40px;
   line-height: 45px;
-  color: #183972;
+  color: #232b38;
   margin-bottom: 50px;
   text-transform: capitalize;
 }
@@ -176,14 +180,14 @@ h4.sub-title {
 
 .cont-details span.fa {
   font-size: 22px;
-  color: #4cb1ff;
+  color: #eebf00;
   display: block;
   margin-top: 3px;
 }
 
 .cont-details h6 {
   font-size: 20px;
-  color: #051b35;
+  color: #ffffff;
   font-weight: 600;
 }
 
@@ -193,7 +197,7 @@ h4.sub-title {
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
-  color: #979191;
+  color: #051b35;
   margin-top: 3px;
 }
 
@@ -256,8 +260,8 @@ button.btn-contact {
   padding: 15px 30px;
   margin: 20px auto 0;
   color: #fff;
-  background: #4cb1ff;
-  border-color: #4cb1ff;
+  background: #eebf00;
+  border-color: #ee;
   display: inline-block;
   font-weight: 400;
   text-align: center;

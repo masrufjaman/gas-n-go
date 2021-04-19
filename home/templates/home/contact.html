@@ -1,5 +1,7 @@
-{% extends "home/base.html" %} <link rel="stylesheet" href="{% static
-"home/styles/contact.css" %}">
+{% extends "home/base.html" %} {% load static %} {% block content %}
+<!-- !Link -->
+<!-- *CSS Link -->
+<link rel="stylesheet" href="{% static "home/styles/contact.css" %}">
 <link rel="stylesheet" href="assets/css/font-awesome.css" />
 <link
   rel="stylesheet"
@@ -7,7 +9,7 @@
   integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
   crossorigin="anonymous"
 />
-{% block content %}
+
 <!-- contact1 -->
 <div class="section-gap"></div>
 <div class="wrapper">
