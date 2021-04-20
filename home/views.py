@@ -10,4 +10,8 @@ def about(request):
 
 
 def contact(request):
-    return render(request, 'home/contact.html', {'title': 'Conatct-Us'})
+    return render(request, 'home/contact.html', {'title': 'Conatct'})
+
+
+def payment(request):
+    return render(request, 'home/payment.html', {'title': 'Payment'})
