@@ -218,8 +218,8 @@
             <i class="bx bxs-star"></i>
           </div>
           <h4 class="price">
-            $ {% if item.discount_price %} {{ item.discount_price }} {% else %}
-            {{ item.price }} {% endif %}
+            $ {% if item.discount_price %} {{ item.discount_price|floatformat:2
+            }} {% else %} {{ item.price|floatformat:2 }} {% endif %}
           </h4>
         </div>
       </div>
