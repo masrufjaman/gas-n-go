@@ -195,10 +195,7 @@
       {% for item in items %}
       <div class="product">
         <div class="product-header">
-          <img
-            src="{% static 'eStore/images/car glass cleaner.jpg' %}"
-            alt=""
-          />
+          <img src="{{ item.imageURL }}" alt="" />
 
           <ul class="icons">
             <span><i class="bx bx-heart"></i></span>
