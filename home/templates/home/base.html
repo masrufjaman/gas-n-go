@@ -21,6 +21,9 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- *Favicon -->
+    <link rel="shortcut icon" type="image/jpg" href="{% static 'home/images/favicon.png' %}"/>
     <!-- ! Links -->
 
     {% if title %}
@@ -34,30 +37,42 @@
     <header class="topbar">
       <div class="container flex justify-between items-center">
         <div class="icons">
-          <a href=""><i class="fab fa-facebook"></i></a>
-          <a href=""><i class="fab fa-twitter"></i></a>
-          <a href=""><i class="fab fa-google"></i></a>
-          <a href=""><i class="fab fa-instagram"></i></a>
+          <img src="{% static 'home/images/icon.png' %}" alt="">
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+          <a href="https://google.com/"><i class="fab fa-google"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
           <a href=""><i class="fab fa-search"></i></a>
         </div>
         <div class="auth flex items-center">
+          <!-- When Login -->
+          {% if user.is_authenticated %}
           <div>
-            <i class="fas fa-users"></i>
-            <!-- TODO: Add login page link -->
-            <a href="">Log in</a>
+            <i class="fab fa-hive"></i>
+            <a href="">{{user.username}}</a>
           </div>
-          <span class="divider">|</span>
-          <div>
-            <i class="fas fa-user-plus"></i>
-            <!-- TODO: Add Ragistration page link -->
-            <a href="">Register Now</a>
-          </div>
-          <span class="divider">|</span>
-          <div>
+            <span class="divider">|</span>
+            <div>
+              <i class="fas fa-sign-out-alt"></i>
+              <a href="{% url 'accounts-logout' %}">Log out</a>
+            </div>
+            <span class="divider">|</span>
+            <div>
             <i class="fas fa-shopping-cart"></i>
             <!-- TODO: Add Payment page link -->
-            <a href="">0 Items - ($0.00)</a>
+            <a href="{% url 'payment' %}">0 Items - ($0.00)</a>
           </div>
+          {% else %}
+            <div>
+              <i class="fas fa-users"></i>
+              <a href="{% url 'accounts-login' %}">Log in</a>
+            </div>
+            <span class="divider">|</span>
+            <div>
+              <i class="fas fa-user-plus"></i>
+              <a href="{% url 'accounts-register' %}">Register Now</a>
+            </div>
+          {% endif %}
         </div>
       </div>
     </header>
@@ -76,9 +91,8 @@
             </div>
           </div>
           <!-- !Logo -->
-          <div class="branding">
-            <!-- TODO: Make Branding logo -->
-            <img src="" alt="" />
+          <div class="branding justify-center">
+            <img src="{% static 'home/images/logo.png' %}" alt="" />
           </div>
           <div class="time flex items-center">
             <i class="far fa-clock"></i>
@@ -90,11 +104,43 @@
         </div>
       </div>
       <!-- *Top-nav End -->
+      
+    <!-- *Bottom-nav Start -->
+    <div class="navbar">
+      <div class="container flex justify-center">
+        {% url 'home-home' as home %}
+        <a href="{% url 'home-home' %}"
+        {% if request.path == home %}
+         class="active"
+        {% endif %}>Home</a>
+        
+        {% url 'home-about' as about %}
+        <a href="{% url 'home-about' %}"
+        {% if request.path == about %}
+          class="active"
+        {% endif %}>About Us</a> 
+        
+        {% url 'home-contact' as contact %}
+        <a href="{% url 'home-contact' %}"
+        {% if request.path == contact %}
+          class="active"
+        {% endif %}
+        >Contact Us</a>
+      </div>
+    </div>
+    <!-- *Bottom-nav End -->
     </nav>
     <!-- *Navbar End -->
 
     <!-- *Content -->
     <div class="container">
+      {% if messages %}
+        {% for message in messages %}
+          <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
       {% block content %}
       
       {% endblock %}
@@ -117,12 +163,12 @@
             <h3>Download our app</h3>
             <p>Download App for android & ios mobile phone.</p>
             <div class="app-logo">
-              <img src="{% static "home/images/play-store.png" %}" alt=""> <img
-              src="{% static "home/images/app-store.png" %}" alt="">
+              <img src="{% static 'home/images/play-store.png' %}" alt=""> <img
+              src="{% static 'home/images/app-store.png' %}" alt="">
             </div>
           </div>
           <div class="footer-col-2">
-            <img src="" alt="" />
+            <img src="{% static 'home/images/logo.png' %}" alt="" />
             <p>Our Purpose Is To Sustainable Make the pleasure.</p>
           </div>
           <div class="footer-col-3">
@@ -148,10 +194,9 @@
 
         <p class="copyright">
           <i class="fa fa-copyright"></i> Copyright 2021-2022 |
-          <strong style="color: #eebf00">Gas N Go</strong>
+          <a href=""><strong style="color: #eebf00">Gas N Go</strong></a>
         </p>
       </div>
-    </class=>
     <!-- * Footer End -->
   </body>
 </html>
