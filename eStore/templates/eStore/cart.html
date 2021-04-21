@@ -1,0 +1,174 @@
+{% extends "home/base.html" %} {% load static %}
+<!-- *Content Start -->
+{% block content %}
+<!-- !Links -->
+<!-- * css link -->
+<link rel="stylesheet" href="{% static 'eStore/styles/cart.css' %}" />
+
+<script
+  src="https://kit.fontawesome.com/332a215f17.js"
+  crossorigin="anonymous"
+></script>
+
+<!-- Bootstrap CSS -->
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+  crossorigin="anonymous"
+/>
+<!-- !Links -->
+<!--Cart Section-->
+<div class="cart">
+  <div class="table-responsive">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col" class="text-white">Product</th>
+          <th scope="col" class="text-white">Price</th>
+          <th scope="col" class="text-white">Quantity</th>
+          <th scope="col" class="text-white">Total</th>
+          <form>
+            <h5>
+              <input type="button" value="Go Back" onclick="history.back()" />
+            </h5>
+          </form>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="main">
+              <div class="d-flex"></div>
+              <div class="des">
+                <p>Glass Cleaner</p>
+              </div>
+            </div>
+          </td>
+          <td>
+            <h6>220 BDT</h6>
+          </td>
+          <td>
+            <div class="counter">
+              <i class="fas fa-angle-down"></i>
+              <input
+                class="input-number"
+                type="text"
+                value="1"
+                min="0"
+                max="10"
+              />
+              <i class="fas fa-angle-up"></i>
+            </div>
+          </td>
+          <td>
+            <h6>
+              220 BDT &nbsp; &nbsp; &nbsp;
+              <a href=""><i class="fa fa-times" aria-hidden="true"></i></a>
+            </h6>
+          </td>
+        </tr>
+        <!----->
+        <tr>
+          <td>
+            <div class="main">
+              <div class="d-flex"></div>
+              <div class="des">
+                <p>Motor Cycle Tire</p>
+              </div>
+            </div>
+          </td>
+          <td>
+            <h6>4840 BDT</h6>
+          </td>
+          <td>
+            <div class="counter">
+              <i class="fas fa-angle-down"></i>
+              <input
+                class="input-number"
+                type="text"
+                value="1"
+                min="0"
+                max="10"
+              />
+              <i class="fas fa-angle-up"></i>
+            </div>
+          </td>
+          <td>
+            <h6>
+              4840 BDT &nbsp; &nbsp;
+              <a href=""><i class="fa fa-times" aria-hidden="true"></i></a>
+            </h6>
+          </td>
+        </tr>
+        <!----->
+        <tr>
+          <td>
+            <div class="main">
+              <div class="d-flex"></div>
+              <div class="des">
+                <p>Car Battery</p>
+              </div>
+            </div>
+          </td>
+          <td>
+            <h6>9800 BDT</h6>
+          </td>
+          <td>
+            <div class="counter">
+              <i class="fas fa-angle-down"></i>
+              <input
+                class="input-number"
+                type="text"
+                value="1"
+                min="0"
+                max="10"
+              />
+              <i class="fas fa-angle-up"></i>
+            </div>
+          </td>
+          <td>
+            <h6>
+              9800 BDT &nbsp; &nbsp;
+              <a href=""><i class="fa fa-times" aria-hidden="true"></i></a>
+            </h6>
+          </td>
+        </tr>
+
+        <!----->
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="col-lg-4 offset-lg-4">
+  <div class="checkout">
+    <ul>
+      <li class="subtotal">
+        subtotal
+        <span>14860 BDT</span>
+      </li>
+      <li class="cart-total">Total <span>14860 BDT</span></li>
+    </ul>
+    <a href="{% url 'payment' %}" class="proceed-btn">Proceed to Checkout</a>
+  </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+  crossorigin="anonymous"
+></script>
+{% endblock content %}
+<!-- *Brands End -->
