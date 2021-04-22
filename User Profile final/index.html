@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> User Profile </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="profile-card">
+        <div class="image-container">
+            <img src="./images/pexels-alexgtacar-1592384.jpg">
+            <div class="title">
+                <h2>Mr.Gas N Go</h2>
+            </div>
+        </div>
+        <div class="main-container">
+            <p><i class="fa fa-venus info"></i>Male</p>
+            <p><i class="fa fa-home info"></i>Bashundhara</p>
+            <p><i class="fa fa-envelope info"></i>gasNgo@gmail.com</p>
+            <p><i class="fa fa-phone info"></i>+8801000000000</p>
+
+
+            <hr> &nbsp;
+            <p><b><i class="fas fa-credit-card info"></i> Debit Card : 0101010101010</b></p> &nbsp;
+
+            <p><b><i class="fas fa-credit-card info"></i> Credit Card : 0101010101010</b></p>
+
+            <button class="btn">Orders</button>
+            <div class="about">
+                <img src="./images/pexels-alexgtacar-1592384.jpg" alt="">
+                <h3>Mr.Gas N Go</h3>
+                <p>Order No.......................................................................... ....................................................................................... .......................................................................................
+                    ....................................................................................... ....................................................................................... .............
+
+
+                </p>
+
+            </div>
+
+            &nbsp;
+            <div class="follow">
+                <p>Rating</p>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+
+            </div>
+
+        </div>
+    </div>
+    <script>
+        let btn = document.querySelector('.btn');
+        let about = document.querySelector('.about');
+        btn.addEventListener('click', function() {
+            if (this.innerText == "Orders") {
+                about.style.display = "block";
+                this.innerText = "Less";
+            } else {
+                about.style.display = "none";
+                this.innerText = "Orders";
+            }
+        })
+    </script>
+
+
+
+</body>
+
+</html>
