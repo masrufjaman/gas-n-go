@@ -10,4 +10,12 @@ def about(request):
 
 
 def contact(request):
-    return render(request, 'home/contact.html', {'title': 'Conatct-Us'})
+    return render(request, 'home/contact.html', {'title': 'Conatct'})
+
+
+def payment(request):
+    return render(request, 'home/payment.html', {'title': 'Payment'})
+
+
+def membership(request):
+    return render(request, 'home/membership.html', {'title': 'Membership'})

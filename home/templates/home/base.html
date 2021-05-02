@@ -60,7 +60,7 @@
             <div>
             <i class="fas fa-shopping-cart"></i>
             <!-- TODO: Add Payment page link -->
-            <a href="">0 Items - ($0.00)</a>
+            <a href="{% url 'payment' %}">0 Items - ($0.00)</a>
           </div>
           {% else %}
             <div>
@@ -169,12 +169,12 @@
           </div>
           <div class="footer-col-2">
             <img src="{% static 'home/images/logo.png' %}" alt="" />
-            <p>Our Purpose Is To Sustainable Make the pleasure.</p>
+            <p>Our Purpose is to bring the best product of the market to the beloved customer and make them happy</p>
           </div>
           <div class="footer-col-3">
             <h3>Useful Links</h3>
             <ul>
-              <li>Membership</li>
+              <li><a href="{% url 'membership' %}" style="text-decoration: none; color: #eebf00">Membership</a></li>
               <li>Blog Post</li>
               <li>Return Policy</li>
               <li>Join Affiliate</li>
