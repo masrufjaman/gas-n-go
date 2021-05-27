@@ -15,3 +15,7 @@ def contact(request):
 
 def payment(request):
     return render(request, 'home/payment.html', {'title': 'Payment'})
+
+
+def membership(request):
+    return render(request, 'home/membership.html', {'title': 'Membership'})
