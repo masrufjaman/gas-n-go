@@ -45,21 +45,33 @@
           <a href=""><i class="fab fa-search"></i></a>
         </div>
         <div class="auth flex items-center">
+          <!-- When Login -->
+          {% if user.is_authenticated %}
           <div>
-            <i class="fas fa-users"></i>
-            <a href="{% url 'accounts-login' %}">Log in</a>
+            <i class="fab fa-hive"></i>
+            <a href="">{{user.username}}</a>
           </div>
-          <span class="divider">|</span>
-          <div>
-            <i class="fas fa-user-plus"></i>
-            <a href="{% url 'accounts-register' %}">Register Now</a>
-          </div>
-          <span class="divider">|</span>
-          <div>
+            <span class="divider">|</span>
+            <div>
+              <i class="fas fa-sign-out-alt"></i>
+              <a href="{% url 'accounts-logout' %}">Log out</a>
+            </div>
+            <span class="divider">|</span>
+            <div>
             <i class="fas fa-shopping-cart"></i>
-            <!-- TODO: Add Payment page link -->
-            <a href="">0 Items - ($0.00)</a>
+            <a href="{% url 'eStore-cart' %}">0 Items - ($0.00)</a>
           </div>
+          {% else %}
+            <div>
+              <i class="fas fa-users"></i>
+              <a href="{% url 'accounts-login' %}">Log in</a>
+            </div>
+            <span class="divider">|</span>
+            <div>
+              <i class="fas fa-user-plus"></i>
+              <a href="{% url 'accounts-register' %}">Register Now</a>
+            </div>
+          {% endif %}
         </div>
       </div>
     </header>
@@ -98,26 +110,18 @@
         {% url 'home-home' as home %}
         <a href="{% url 'home-home' %}"
         {% if request.path == home %}
-          class="active"
-        {% endif %}
-        >Home</a>
+         class="active"
+        {% endif %}>Home</a>
         
         {% url 'home-about' as about %}
-        <a href="{% url 'home-about' %}" 
+        <a href="{% url 'home-about' %}"
         {% if request.path == about %}
           class="active"
-        {% endif %} >About Us</a>
+        {% endif %}>About Us</a> 
         
-        {% url 'home-help' as help %}
-        <a href="{% url 'home-help' %}"
-        {% if request.path == help %}
-          class="active"
-        {% endif %}
-        >Help</a>
-        
-        {% url '' as help %}
-        <a href="{% url 'home-help' %}"
-        {% if request.path == help %}
+        {% url 'home-contact' as contact %}
+        <a href="{% url 'home-contact' %}"
+        {% if request.path == contact %}
           class="active"
         {% endif %}
         >Contact Us</a>
@@ -164,12 +168,12 @@
           </div>
           <div class="footer-col-2">
             <img src="{% static 'home/images/logo.png' %}" alt="" />
-            <p>Our Purpose Is To Sustainable Make the pleasure.</p>
+            <p>Our Purpose is to bring the best product of the market to the beloved customer and make them happy</p>
           </div>
           <div class="footer-col-3">
             <h3>Useful Links</h3>
             <ul>
-              <li>Membership</li>
+              <li><a href="{% url 'membership' %}" style="text-decoration: none; color: #eebf00">Membership</a></li>
               <li>Blog Post</li>
               <li>Return Policy</li>
               <li>Join Affiliate</li>
@@ -192,7 +196,6 @@
           <a href=""><strong style="color: #eebf00">Gas N Go</strong></a>
         </p>
       </div>
-    </class=>
     <!-- * Footer End -->
   </body>
 </html>

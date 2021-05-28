@@ -1,0 +1,40 @@
+{% extends "home/base.html" %} {% load static %}
+
+<!-- *Content Start -->
+{% block content %}
+<!-- !Links -->
+<!-- * css link -->
+<link rel="stylesheet" href="{% static 'home/styles/membership.css' %}" />
+<!-- !Links -->
+
+<section>
+  <div class="card">
+    <div class="face front">
+      <h3 class="debit">Membership Card</h3>
+      <h3 class="bank">Gas N Go</h3>
+      <img src="{% static 'home/images/CHIPS.png' %}" class="chip" />
+      <h3 class="number">0123 4567 8901 2345</h3>
+      <h5 class="valid">
+        <span>Valid<br />thru</span><span>10/23</span>
+      </h5>
+      <h5 class="cardHolder">Customer Name</h5>
+    </div>
+    <div class="face back">
+      <div class="blackbar"></div>
+      <div class="ccvtext">
+        <h5>Autorized Signature-not valid unless signed</h5>
+        <div class="whiteBar"></div>
+        <div class="ccv">123</div>
+      </div>
+      <p class="text">Authenticated By - Anondo Hossain Rafi</p>
+      <p class="text-2">
+        This is a membership card of Gas-N-Go. This card will give more discount
+        to our beloved consumers and Our consumers can get service easily by
+        using this card and we always want to make our consumers happy.Thank You
+        from Gas-N-Go.
+      </p>
+    </div>
+  </div>
+</section>
+{% endblock content %}
+<!-- *Content End -->
