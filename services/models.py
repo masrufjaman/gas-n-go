@@ -1,0 +1,23 @@
+from django.db import models
+
+
+class Vehicle(models.Model):
+
+    SERVICE_CHOICES = [{'P', 'Platinum'}, {'G', 'Gold'}]
+    VEHICLE_CHOICES = [{'B', 'Bike'}, {'C', 'Car'}]
+
+    vehicle_type = models.CharField(
+        choices=VEHICLE_CHOICES, max_length=4, blank=True)
+    vehicle_model = models.CharField(max_length=100)
+    vehicle_owner = models.CharField(max_length=100)
+    vehicle_problems = models.CharField(max_length=100)
+    vehicle_reg_number = models.CharField(max_length=30)
+    description = models.TextField()
+    service_type = models.CharField(
+        choices=SERVICE_CHOICES, max_length=8, blank=True)
+    submission_date = models.DateTimeField()
+    year_old = models.IntegerField(null=True)
+    servicing = models.ManyToManyField('Service', blank=True)
+
+class Service(models.Model):
+    name = models.CharField(max_length=50)
