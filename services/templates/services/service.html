@@ -1,22 +1,67 @@
-{% load static %}
+{% extends "home/base.html" %} {% load static %}
+<!-- *Content Start -->
+{% block content %}
+<!-- !Links -->
+<!-- * css link -->
+<link rel="stylesheet" href="{% static 'services/styles/service.css' %}" />
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Links -->
-    <link rel="stylesheet" href="{% static "services/styles/service.css" %}">
-    <!-- Links -->
+<!-- Box icons -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+/>
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js "></script>
+<!-- !Links -->
 
-    {% if title %}
-    <title>Gas N Go || {{ title }}</title>
-    {% else %}
-    <title>Gas N Go</title>
-    {% endif %}
-  </head>
-  <body>
-    <h1>Our Service Page</h1>
-  </body>
-</html>
+<div class="container">
+        <center>
+          <h1> Service centre</h1>
+        <h2>..............Description................</h2>
+        </center>
+        
+        <p>
+
+            <form>
+                <input type="checkbox" id="name-1" name="name-1" value="LKW Diesel">
+                <lebel for="name1">Wash</lebel> &nbsp; &nbsp;
+                <input type="checkbox" id="name-2" name="name-2" value="Diesel">
+                <lebel for="name2">Engine</lebel> &nbsp; &nbsp;
+                <input type="checkbox" id="name-3" name="name-3" value="Super E10">
+                <lebel for="name3">Wheel</lebel> &nbsp; &nbsp;
+                <input type="checkbox" id="name-4" name="name-4" value="Super Plus">
+                <lebel for="name4">Electric</lebel> &nbsp; &nbsp;
+                <input type="checkbox" id="name-5" name="name-5" value="Ad Blue">
+                <lebel for="name5">Glass</lebel> &nbsp; &nbsp;
+                <input type="checkbox" id="name-6" name="name-6" value="Auto Gas">
+                <lebel for="name6">Wire</lebel> &nbsp; &nbsp;
+                <input type="checkbox" id="name-7" name="name-7" value="Erd Gas">
+                <lebel for="name7">Erd Gas</lebel> &nbsp; &nbsp;
+                <!-- <br><br><input type="checkbox" id="name-8" name="name-8" value="Octen">
+                <lebel for="name8">Octen</lebel> &nbsp; &nbsp;
+                <input type="checkbox" id="name-9" name="name-9" value="Fuel">
+                <lebel for="name9">Fuel</lebel> &nbsp; &nbsp;
+                <input type="checkbox" id="fruit-10" name="name-10" value="Gas">
+                <lebel for="name10">Gas</lebel> &nbsp; &nbsp;
+                <input type="checkbox" id="name-11" name="name-11" value="Lubricant">
+                <lebel for="name11">Lubricant</lebel> &nbsp; &nbsp;
+                <input type="checkbox" id="name-12" name="name-12" value="Oil">
+                <lebel for="name12">Oil</lebel> &nbsp; &nbsp;
+                <input type="checkbox" id="name-13" name="name-13" value="Petrol">
+                <lebel for="name13">Petrol</lebel> &nbsp; &nbsp;
+                <input type="checkbox" id="name-14" name="name-14" value="Parts">
+                <lebel for="name14">Parts</lebel> &nbsp; &nbsp;
+                <input type="checkbox" id="name-15" name="name-15" value="Wash">
+                <lebel for="name15">Wash</lebel> &nbsp; &nbsp;
+                <input type="checkbox" id="name-16" name="name-16" value="Colouring">
+                <lebel for="name16">Colorring</lebel> &nbsp; &nbsp; -->
+
+            </form>
+
+        </p>
+        <a href="{% url 'eStore-cart' %}" class="btn">Submit</a>
+
+
+    </div>
+{% endblock content %}
+<!-- *Brands End -->
