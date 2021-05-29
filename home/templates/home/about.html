@@ -1,3 +1,20 @@
-{% extends "home/base.html" %} {% block content %}
-<h1>This is our about us Page!</h1>
+{% extends "home/base.html" %} {% load static %} {% block content %}
+<!-- !Links -->
+<!-- * css link -->
+<link rel="stylesheet" href="{% static 'home/styles/about.css' %}" />
+
+<div class="about-section">
+  <div class="inner-container">
+    <h1>About Us</h1>
+    <p class="text">
+    If you are looking for quality product, homelike servicing for your beloved car then you are at the right place.
+    Wait a second you will love to know that you can also refill your car gas from us with a convenient amount of money.  
+     </p>
+    <div class="skills">
+      <span>Ideal Servicing</span>
+      <span>Loading Oil/Gas</span>
+      <span>Purchasing</span>
+    </div>
+  </div>
+</div>
 {% endblock content %}
